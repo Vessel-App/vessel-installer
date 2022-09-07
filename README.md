@@ -12,3 +12,5 @@ To install Vessel, you can run this script:
 ```bash
 curl <hostname>/stable/install.sh | sh
 ```
+
+For installation instructions, see the [Vessel CLI repository](https://github.com/Vessel-App/vessel-cli).
