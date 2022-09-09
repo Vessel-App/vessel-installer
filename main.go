@@ -125,7 +125,9 @@ func main() {
 
 	// Return the latest stable version
 	http.Handle("/", http.RedirectHandler("https://github.com/Vessel-App/vessel-cli", 302))
+	http.HandleFunc("/version", GetStableVersion)
 	http.HandleFunc("/stable/version", GetStableVersion)
+	http.HandleFunc("/install.sh", GetStableInstall)
 	http.HandleFunc("/stable/install.sh", GetStableInstall)
 	http.ListenAndServe(":8080", nil)
 }
