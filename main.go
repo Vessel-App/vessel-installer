@@ -61,7 +61,7 @@ esac
 arch=$(uname -m)
 version=${1:-%s}
 
-if [ "$arch" == "x86_64" ]; then
+if [ "$arch" = "x86_64" ]; then
 	arch="amd64"
 fi
 
@@ -79,7 +79,7 @@ tar xzf "$exe.tar.gz"
 chmod +x "$exe"
 rm "$exe.tar.gz"
 
-if [ "$os" == "darwin" ]; then
+if [ "$os" = "darwin" ]; then
 	echo "\n\033[0;32m\xE2\x9C\x94\033[0m vessel ${version} was installed successfully to $exe\n"
 else
 	echo -e "\n\033[0;32m\xE2\x9C\x94\033[0m vessel ${version} was installed successfully to $exe\n"
@@ -94,7 +94,7 @@ else
 	*) shell_profile=".bash_profile" ;;
 	esac
 
-	if [ "$os" == "darwin" ]; then
+	if [ "$os" = "darwin" ]; then
 		echo "\033[0;33mNote:\033[0m Manually add the following to your \$HOME/$shell_profile (or similar)"
 	else
 		echo -e "\033[0;33mNote:\033[0m Manually add the following to your \$HOME/$shell_profile (or similar)"
